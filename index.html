@@ -17,65 +17,77 @@
     <title>Form Biglietto del Treno</title>
 </head>
 <body>
-    <h2 class="text-uppercase">Calcola il prezzo del tuo biglietto</h2>
-    <div class="math">
-        
-      <!-- DATI DA INSERIRE -->
-      <div class="data">
-        <div class="section">
-          <label for="name">Nome Cognome</label>
-          <input type="text" id="name" placeholder="Inserisci il tuo nome">
-        </div>
-        <div class="section">
-          <label for="km">Km da percorrere</label>
-          <input type="number" id="km" min="1" placeholder="Inserisci i Km">
-        </div>
-        <div class="section">
-          <label for="age">Fascia d'età</label>
-          <select name="Fascia d'età" id="age">
-            <option value="minorenne">Minorenne</option>
-            <option value="maggiorenne">Maggiorenne</option>
-            <option value="over65">Over 65</option>
-          </select>
-        </div>
-      </div>
+    <h1 class="text-uppercase fw-bold my-3">Calcola il prezzo del tuo biglietto</h1>
 
-      <!-- PULSANTI -->
-      <div class="buttons">
-        <div class="btn" id="generate">Genera</div>
-        <div class="btn" id="abort">Annulla</div>
-      </div>
+    <!-- SEZIONE FORM -->
+    <section class="container-fluid text-center up-card rounded-4 shadow">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="name">Nome Cognome</label>
+                    <input type="text" id="name" placeholder="Inserisci il tuo nome" class="icustom rounded-1">
+                </div>
+                <div class="col-md-4">
+                    <label for="km">Km da percorrere</label>
+                    <input type="number" id="km" min="1" placeholder="Inserisci i Km" class="icustom rounded-1">
+                </div>
+                <div class="col-md-4">
+                    <label for="age">Fascia d'età</label>
+                    <div>
+                        <select name="Fascia d'età" id="age" class="icustom rounded-1">
+                            <option value="minorenne">Minorenne</option>
+                            <option value="maggiorenne">Maggiorenne</option>
+                            <option value="over65">Over 65</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-6 offset-md-3">
+                    <div class="btn-group">
+                        <div class="btn btn-custom mx-4 my-4 rounded-3" id="generate">Genera</div>
+                        <div class="btn btn-custom mx-4 my-4 rounded-3" id="abort">Annulla</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEZIONE RIEPILOGO -->
+    <h2 class="mt-5 text-uppercase fw-bold">Il tuo biglietto</h2>
+    <div id="riepilogo" class="hidden">
+        <section  class="down-card rounded-4 shadow my-5">
+            <h2>Dettaglio passeggeri</h2>
+            <div>
+                <div class="row">
+                    <div class="col-md-4 pass-custom">
+                        <div class="passeggero rounded-3">
+                            <h4 class="mt-4">Nome passeggero</h4>
+                            <div id="nome-pass"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <!-- TABELLA :( -->
+                        <div class="tabella">
+                            <table>
+                                <tr>
+                                    <th>Offerta</th>
+                                    <th>Carrozza</th>
+                                    <th>Codice CP</th>
+                                    <th>Costo biglietto</th>
+                                </tr>
+                                <tr>
+                                    <td><span id="offerta"></span></td>
+                                    <td><span id="carrozza"></span></td>
+                                    <td><span id="codice"></span></td>
+                                    <td><span id="costo"></span> €</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-
-    <section class="down">
-        <h2>Il tuo biglietto</h2>
-        <div id="riepilogo" class="hidden">
-          <h3>Dettaglio passeggeri</h3>
-          <div class="dettagli">
-            <div class="passeggero">
-              <h4>Nome passeggero</h4>
-              <div id="nome-pass"></div>
-            </div>
-
-            <!-- TABELLA :( -->
-            <div class="tabella">
-              <table>
-                <tr>
-                  <th>Offerta</th>
-                  <th>Carrozza</th>
-                  <th>Codice CP</th>
-                  <th>Costo biglietto</th>
-                </tr>
-                <tr>
-                  <td><span id="offerta"></span></td>
-                  <td><span id="carrozza"></span></td>
-                  <td><span id="codice"></span></td>
-                  <td><span id="costo"></span> €</td>
-                </tr>
-              </table>
-            </div>
-          </div>
-        </div>
-      </section>
 </body>
 </html>

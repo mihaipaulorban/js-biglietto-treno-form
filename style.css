@@ -1,7 +1,100 @@
+/* FUNZIONE DI SCOMPARSA RIEPILOGO */
 .hidden {
     display: none;
 }
 
+#riepilogo {
+    width: 70%;
+}
+
 .show {
     display: block;
+}
+
+/* STILI PERSONALIZZATI */
+body {
+    background-color: #ebcfb2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.up-card,
+.down-card {
+    background-color: #424b54;
+    color: #e1ce7a;
+}
+
+.up-card{
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
+    height: auto;
+}
+.btn-custom {
+    outline: #e1ce7a solid 1px;
+    color: #e1ce7a;
+}
+
+.btn-custom:hover {
+    background-color: #e1ce7a;
+    color: #424b54;
+}
+
+input {
+    margin: 10px;
+}
+
+label {
+    margin: 20px;
+}
+
+.w-custom{
+    width: 50%;
+}
+
+.down-card {
+    width: 100%;
+    padding: 20px;
+}
+
+
+.down-card h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+}
+
+.tabella {
+    margin: 20px 0;
+}
+
+.tabella table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabella th,
+.tabella td {
+    padding: 20px 0;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.passeggero {
+    background-color: #6c747c;
+    padding: 0px 10px;
+    width: 100%;
+    height: 80%;
+}
+
+.icustom {
+    background-color: #424b54;
+    border: #e1ce7a 1px solid;
+    color: #e1ce7a;
+    
 }
