@@ -18,11 +18,12 @@
 </head>
 <body>
     <h2 class="text-uppercase">Calcola il prezzo del tuo biglietto</h2>
-    <div class="calcolo">
+    <div class="math">
+        
       <!-- DATI DA INSERIRE -->
       <div class="data">
         <div class="section">
-          <label for="nome">Nome Cognome</label>
+          <label for="name">Nome Cognome</label>
           <input type="text" id="name" placeholder="Inserisci il tuo nome">
         </div>
         <div class="section">
@@ -31,13 +32,14 @@
         </div>
         <div class="section">
           <label for="age">Fascia d'età</label>
-          <select name="" id="age">
+          <select name="Fascia d'età" id="age">
             <option value="minorenne">Minorenne</option>
             <option value="maggiorenne">Maggiorenne</option>
             <option value="over65">Over 65</option>
           </select>
         </div>
       </div>
+
       <!-- PULSANTI -->
       <div class="buttons">
         <div class="btn" id="generate">Genera</div>
@@ -45,5 +47,35 @@
       </div>
     </div>
 
+    <section class="down">
+        <h2>Il tuo biglietto</h2>
+        <div id="riepilogo" class="hidden">
+          <h3>Dettaglio passeggeri</h3>
+          <div class="dettagli">
+            <div class="passeggero">
+              <h4>Nome passeggero</h4>
+              <div id="nome-pass"></div>
+            </div>
+
+            <!-- TABELLA :( -->
+            <div class="tabella">
+              <table>
+                <tr>
+                  <th>Offerta</th>
+                  <th>Carrozza</th>
+                  <th>Codice CP</th>
+                  <th>Costo biglietto</th>
+                </tr>
+                <tr>
+                  <td><span id="offerta"></span></td>
+                  <td><span id="carrozza"></span></td>
+                  <td><span id="codice"></span></td>
+                  <td><span id="costo"></span> €</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
 </body>
 </html>
