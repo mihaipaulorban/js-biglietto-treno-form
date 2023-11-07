@@ -1,29 +1,29 @@
- // Chiedo all'utente di inserire il numero di chilometri da percorrere
-let km = parseFloat(prompt("Inserisci il numero di chilometri da percorrere: "));
 
-// Chiedo all'utente di inserire l'età del passeggero
-let eta = parseInt(prompt("Inserisci l'età del passeggero: "));
-    
-// Calcolo il prezzo del biglietto in base ai km (0.21 € al km)
-let prezzoBiglietto = km * 0.21;
-    
-// Determinare lo sconto in base all'età del passeggero
-let sconto = 0;
-   if (eta < 18) {
-         sconto = 0.20;
-     } else if (eta >= 65) {
-         sconto = 0.40;
-     }
-    
-// Calcolare il prezzo finale del biglietto con lo sconto
-let prezzoFinale = prezzoBiglietto - (prezzoBiglietto * sconto);
-    
-// Visualizzare il prezzo finale del biglietto in forma umana (con massimo due decimali)
-document.write("Il prezzo totale del biglietto di viaggio è: €" + prezzoFinale.toLocaleString('it-IT', { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
-    
-//Visualizza le informazioni sulla console
-console.log("Il prezzo finale del biglietto è: €" + prezzoFinale.toLocaleString('it-IT', { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
-console.log("I km percorsi sono: " + km);
-console.log("L'età del passeggero è: " + eta);
-console.log("Lo sconto applicato è: " + sconto);
-        
+var pulsanteGenera = document.getElementById("generate");
+pulsanteGenera.addEventListener('click',
+function() {
+
+  var nomeCognome = document.getElementById('name').value;
+  var chilometri = document.getElementById('km').value;
+  var age = document.getElementById('age').value;
+  var prezzo = chilometri * 0.21;
+  var offerta = 'Standard';
+  var sconto;
+  var prezzoFinale = prezzo;
+
+  if (age == 'minorenne') {
+    offerta ='Sconto minorenne'
+    sconto = prezzo * 20 / 100;
+    prezzoFinale = prezzo - sconto;
+  }else if (age == 'over65') {
+    offerta = 'Sconto Silver'
+    sconto = prezzo * 40 / 100;
+    prezzoFinale = prezzo - sconto;
+  }
+
+  console.log(nomeCognome);
+  console.log(chilometri);
+  console.log(age);
+  console.log(prezzoFinale)
+}
+);

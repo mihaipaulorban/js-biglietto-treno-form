@@ -17,6 +17,33 @@
     <title>Form Biglietto del Treno</title>
 </head>
 <body>
+    <h2 class="text-uppercase">Calcola il prezzo del tuo biglietto</h2>
+    <div class="calcolo">
+      <!-- DATI DA INSERIRE -->
+      <div class="data">
+        <div class="section">
+          <label for="nome">Nome Cognome</label>
+          <input type="text" id="name" placeholder="Inserisci il tuo nome">
+        </div>
+        <div class="section">
+          <label for="km">Km da percorrere</label>
+          <input type="number" id="km" min="1" placeholder="Inserisci i Km">
+        </div>
+        <div class="section">
+          <label for="age">Fascia d'età</label>
+          <select name="" id="age">
+            <option value="minorenne">Minorenne</option>
+            <option value="maggiorenne">Maggiorenne</option>
+            <option value="over65">Over 65</option>
+          </select>
+        </div>
+      </div>
+      <!-- PULSANTI -->
+      <div class="buttons">
+        <div class="btn" id="generate">Genera</div>
+        <div class="btn" id="abort">Annulla</div>
+      </div>
+    </div>
 
 </body>
 </html>
